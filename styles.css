@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: #180658;
+    color: white;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+#tree-container {
+    text-align: center;
+}
+#tree {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+}
+#star {
+    color: gold;
+    font-size: 50px;
+    filter: drop-shadow(0 0 30px yellow);
+    margin-bottom: -10px;
+    animation: startScale 0.5s infinite alternate linear;
+}
+#trunk {
+    color: brown;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -5px;
+    line-height: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.name {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: emoji;
+    color: rgb(90, 242, 90);
+    text-shadow: 0 0 10px rgb(62, 164, 62);
+    overflow: hidden;
+    transition: 0.2s;
+}
+@keyframes startScale {
+    from {
+        transform: scale(0.7);
+    } to {
+        transform: scale(1);
+    }
+}
