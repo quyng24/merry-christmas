@@ -9,7 +9,7 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background: #180658;
+    background: #1e3a5f;
     color: white;
     font-family: sans-serif;
     overflow: hidden;
@@ -33,7 +33,7 @@ body {
     animation: startScale 0.5s infinite alternate linear;
 }
 #trunk {
-    color: brown;
+    color: rgb(51, 244, 30);
     font-size: 20px;
     font-weight: bold;
     margin-top: -5px;
@@ -43,19 +43,42 @@ body {
     align-items: center;
     flex-direction: column;
 }
+.bangrol {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 0.8;
+    animation: convert 0.3s infinite alternate linear;
+}
 .name {
     font-size: 50px;
     font-weight: bold;
     font-family: emoji;
-    color: rgb(90, 242, 90);
-    text-shadow: 0 0 10px rgb(62, 164, 62);
     overflow: hidden;
-    transition: 0.2s;
+    animation: convert 0.3s infinite alternate linear;
 }
 @keyframes startScale {
     from {
         transform: scale(0.7);
     } to {
         transform: scale(1);
+    }
+}
+@keyframes convert {
+    from {
+        color: yellow;
+    } to {
+        color: red;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #tree {
+        font-size: 16px;
+    }
+    #trunk {
+        font-size: 16px;
+    }
+    .name {
+        font-size: 30px;
     }
 }
