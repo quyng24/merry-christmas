@@ -13,6 +13,24 @@ body {
     color: white;
     font-family: sans-serif;
     overflow: hidden;
+    position: relative;
+}
+#snowfall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 10px;
+    opacity: 0.8;
+    animation: fall linear infinite;
 }
 #tree-container {
     text-align: center;
@@ -69,6 +87,13 @@ body {
         color: yellow;
     } to {
         color: red;
+    }
+}
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    } 100% {
+        transform: translateY(100vh) rotate(360deg);
     }
 }
 @media only screen and (max-width: 768px) {

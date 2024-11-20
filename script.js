@@ -33,8 +33,27 @@ function generateTree() {
     tree.appendChild(row);
   }
 }
+// Hiệu ứng tuyết rơi
+const snowfall = document.getElementById('snowfall');
+function createSnowflake() {
+  const snowflake = document.createElement('div');
+  snowflake.classList.add('snowflake');
+  snowflake.innerHTML = "❄";
 
+  // Vị trí ngẫu nhiên
+  snowflake.style.left = `${Math.random() * 100}vw`;
+  snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`;
+  snowflake.style.fontSize = `${Math.random() * 10 + 10}px`;
+
+  snowfall.appendChild(snowflake);
+
+  // Loại bỏ bông tuyết khi kết thúc
+  setTimeout(() => {
+    snowflake.remove();
+  }, 5000);
+}
 // Thay đổi liên tục
 setInterval(generateTree, 500);
+setInterval(createSnowflake, 100);
 
 
