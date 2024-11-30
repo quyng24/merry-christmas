@@ -55,5 +55,10 @@ function createSnowflake() {
 // Thay đổi liên tục
 setInterval(generateTree, 500);
 setInterval(createSnowflake, 100);
-
-
+// play music
+const audio = document.querySelector('#background-radio');
+const btnAudio = document.querySelector('button');
+console.log(audio + ' ' + btnAudio)
+btnAudio.addEventListener('click', () => {
+  audio.play();
+})
